@@ -61,12 +61,6 @@ body {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-
 a {
     text-decoration: none;
     color: inherit;
@@ -259,7 +253,6 @@ ul {
     text-shadow: 0 0 8px rgba(45, 228, 194, 0.6);
 }
 
-
 @media (max-width: 992px) {
     .nav__toggle {
         display: block;
@@ -310,7 +303,6 @@ ul {
 }
 
 /* Home Section */
-/* Desktop (стандартний) */
 .home__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -320,14 +312,12 @@ ul {
     position: relative;
 }
 
-/* Субтитл */
 .home__subtitle {
     color: var(--text-muted);
     letter-spacing: 4px;
     font-size: 1.8rem;
 }
 
-/* Заголовок */
 .home__title {
     font-family: 'Montserrat', sans-serif;
     font-size: 4rem;
@@ -343,13 +333,10 @@ ul {
     margin: 1rem 0 2rem;
 }
 
-/* Home images */
 .home__images {
     position: relative;
 }
 
-
-/* Трикутники */
 .home__triangle {
     position: absolute;
     border-radius: 50%;
@@ -395,7 +382,6 @@ ul {
     z-index: 0;
 }
 
-/* Tablet */
 @media (max-width: 992px) {
     .home__container {
         grid-template-columns: 1fr;
@@ -442,7 +428,6 @@ ul {
     }
 }
 
-/* Mobile */
 @media (max-width: 576px) {
     .home__title {
         font-size: 2.2rem;
@@ -486,7 +471,6 @@ ul {
 }
 
 /* Brands Section */
-
 .brands section {
     position: relative;
     padding: 5rem 0;
@@ -571,11 +555,9 @@ ul {
     background: var(--bg-card);
     padding: 2.5rem 2rem;
     border-radius: 16px;
-
     display: flex;
     flex-direction: column;
     text-align: center;
-
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     overflow: hidden;
@@ -705,9 +687,9 @@ ul {
     }
 }
 
-
 /* Choose Section */
 .choose__wrapper {
+    max-width: 100%;
     display: flex;
     align-items: stretch;
     gap: 4rem;
@@ -750,7 +732,7 @@ ul {
 
 .choose__image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -791,6 +773,7 @@ ul {
 .choose__content {
     position: relative;
     z-index: 2;
+    flex: 1;
 }
 
 .choose__glow-top {
@@ -811,26 +794,22 @@ ul {
         text-align: center;
     }
 
-    /* Робимо content flex-колонкою */
     .choose__content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    /* Заголовок перший */
     .section__subtitle,
     .section__titles {
         order: 1;
     }
 
-    /* Фото друге */
     .choose__image {
         order: 2;
         margin: 2rem 0;
     }
 
-    /* Список третій */
     .choose__list {
         order: 3;
     }
@@ -856,7 +835,6 @@ ul {
         border-radius: 12px;
     }
 
-    /* Зменшуємо glow */
     .choose::before {
         width: 300px;
         height: 300px;
@@ -878,9 +856,7 @@ ul {
     }
 }
 
-
 /* Pricing Section */
-
 .pricing__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1042,7 +1018,6 @@ ul {
 
 
 /* Calculate Section */
-
 .bmi {
     position: relative;
     min-height: 100vh;
@@ -1062,7 +1037,6 @@ ul {
 .bmi__wrapper {
     position: relative;
     z-index: 1;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: stretch;
@@ -1238,21 +1212,6 @@ ul {
     z-index: 0;
 }
 
-/* @media (max-width: 992px) {
-    .bmi__wrapper {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .bmi__content {
-        text-align: center;
-    }
-
-    .bmi__text {
-        margin-left: auto;
-        margin-right: auto;
-    }
-} */
 @media (max-width: 992px) {
 
     .bmi__wrapper {
@@ -1276,7 +1235,6 @@ ul {
 }
 
 /* Footer */
-
 .footer {
     background: #0b0f14;
     padding: 5rem 0 2rem;
