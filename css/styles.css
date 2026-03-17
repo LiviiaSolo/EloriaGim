@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap");
 
-/* * {
-  outline: 1px solid #d10823;
-}  */
 
 :root {
   --bg-dark: #0d0b14;
   --bg-card: #161225;
   --purple: #5a2ea6;
   --purple-light: #8a63f2;
-  /* --accent: #2de4c2; */
 	--accent: #00e5ff;
   --accent-light: #5fffe0;
   --text-light: #e8e8f5;
@@ -75,18 +71,22 @@ ul {
   } 
 }
 
-
 .section__title {
   font-family: "Montserrat", sans-serif;
   font-size: 2.7rem;
   color: var(--purple-light);
 }
 
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2.2rem;
+  }
+}
+
 .section__title-border {
   font-family: "Montserrat", sans-serif;
   font-size: 2.7rem;
   color: var(--purple-light);
-  /* text-shadow: 0 0 10px var(--purple); */
 }
 
 .section__subtitle {
@@ -282,8 +282,11 @@ ul {
   }
 
   .nav__list {
+    display: flex;
     flex-direction: column;
     gap: 1.8rem;
+    align-items: start;
+    margin-left: 30px;
   }
 
   .nav__close {
@@ -730,14 +733,12 @@ ul {
   }
 }
 
-
 /* Choose Section */
 .choose__wrapper {
   max-width: 100%;
   display: flex;
   align-items: stretch;
   gap: 4rem;
-  /* padding: 5rem 0; */
 }
 
 .choose__content {
@@ -914,7 +915,7 @@ ul {
 }
 
 /* Pricing Section */
-.pricing section {
+.pricing .section {
 	position: relative;
 }
 
@@ -1110,14 +1111,8 @@ ul {
 }
 
 @media (max-width: 576px) {
-  /* .pricing__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  } */
-
   .pricing__card {
     min-height: auto;
-    /* padding: 1rem 0.5rem; */
   }
 
   .pricing__title {
@@ -1187,8 +1182,8 @@ ul {
 }
 
 .bmi__image img {
-  width: 100%;
-  height: auto;
+  position: relative;
+  width: 95%;
 }
 
 .bmi__right {
@@ -1356,6 +1351,7 @@ ul {
 
   .bmi__image {
     order: 1;
+    width: 80%;
   }
 
   .bmi__right {
@@ -1366,6 +1362,12 @@ ul {
   .bmi__card {
     width: 100%;
     max-width: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bmi__image img{
+    width: 100%;
   }
 }
 
@@ -1388,6 +1390,7 @@ ul {
   font-weight: 600;
   color: var(--text-light);
   letter-spacing: 1px;
+ 
 }
 
 .footer__logo:hover {
@@ -1579,13 +1582,11 @@ ul {
 
 
 /* Program modal */
-
 .modal {
   display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.65);
-  /* backdrop-filter: blur(6px); */
   justify-content: center;
   align-items: center;
   z-index: 999;
@@ -1597,7 +1598,6 @@ ul {
   width: 420px;
   border-radius: 14px;
   border: 1px solid rgba(90,46,166,0.35);
-  /* box-shadow: 0 0 25px rgba(90,46,166,0.45); */
   text-align: center;
   position: relative;
 }
@@ -1687,6 +1687,4 @@ ul {
   color: var(--text-light);
   cursor: pointer;
 }
-
-/* нове */
 
